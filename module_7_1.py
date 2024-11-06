@@ -16,7 +16,7 @@ class Shop:
             with open(self.__file_name, 'r') as file:
                 return file.read().strip()
         except FileNotFoundError:
-            return ''  # Если файла нет, возвращаем пустую строку
+            return ''
 
     def add(self, *products):
         existing_products = self.get_products().splitlines()
