@@ -1,7 +1,6 @@
 def custom_write(file_name, strings):
     strings_positions = {}
 
-    # Открываем файл для записи с кодировкой utf-8
     with open(file_name, 'w', encoding='utf-8') as file:
         for index, string in enumerate(strings):
             # Получаем текущую позицию в байтах
@@ -13,8 +12,6 @@ def custom_write(file_name, strings):
 
     return strings_positions
 
-
-# Пример использования функции
 info = [
     'Text for tell.',
     'Используйте кодировку utf-8.',
@@ -24,6 +21,5 @@ info = [
 
 result = custom_write('test.txt', info)
 
-# Выводим результат на консоль
 for elem in result.items():
     print(elem)
